@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sarcina Nr.: 1</title>
+	<script src="newthings.js"></script>
+	<link rel="stylesheet" href="index.css">
+	<script src="angular182.js"></script>
+	<script>
+		angular.module("task1", []).directive("newthings1", function() {
+		  return{
+		    template : `<div class="row-zona">
+		    				Zona 1
+						</div>`
+		  }
+		})
+	</script>
+</head>
+<body ng-app="task1">
+	<div class="task-nr-1">
+		<!--START ZONA-1-->
+			<div class="Zona-1">
+				<newthings1></newthings1>
+				<!--START NEW-THINGS-->
+					<script>
+					{	
+						var zona1 = [], idValue = [], areaIdValue = [], joinedWithValue = [], skuValue = [], defaultSkuValue = [], statusValue = [], countActiveValue = [];
+						zona1 = ["3", "1", "4", "12", "6", "13", "8", "10", "11", "9", "7", "5", "15", "16"];//sku
+
+						for(var a = 0; a <= newThings.length; a++){
+							for(var b1 = 0; b1 <= zona1.length; b1++){
+								if(newThings[a]["sku"] == zona1[b1]){
+						    		idValue[b1]          = newThings[a]["id"]
+						  	  		areaIdValue[b1]      = newThings[a]["areaId"]
+						     		joinedWithValue[b1]  = newThings[a]["joinedWith"]
+						      		skuValue[b1]         = newThings[a]["sku"]
+						     		defaultSkuValue[b1]  = newThings[a]["defaultSku"]
+						     		statusValue[b1]      = newThings[a]["status"]
+						     		countActiveValue[b1] = newThings[a]["countActive"]
+							      if(b1 == zona1.length-1){
+							      	for(let Nr = 0; Nr < zona1.length; Nr++){
+										var joinedWith;
+										if(joinedWithValue[Nr] == null){
+											if(statusValue[Nr] == "closed"){
+												indicatorcolor = 'indicatorColorRed';
+											} else {
+												indicatorcolor = 'indicatorColor';
+											}
+											joinedWith         = 'none';
+										} else {indicatorcolor = '';
+											joinedWith         = '';
+										}
+
+										document.write(` 
+											<div class="block" id="`+ newThings[Nr].id +`">
+												<div class="indicator `+ indicatorcolor +`"></div>
+												<span class="block-nr">
+													`+ skuValue[Nr] +`
+												</span>
+												<div class="b-nr">
+													<span> 
+														`+ defaultSkuValue[Nr] +` 
+													</span>
+												</div>
+												<div class="decor `+ joinedWith +`"></div>
+											</div> 
+										`);
+									}	
+							      }
+						  		}
+							}
+						}
+					}
+					</script>
+				<!--END NEW-THINGS-->
+			</div>
+		<!--END   ZONA-1-->
+		<!--START ZONA-2-->
+			<div class="Zona-2">
+				<div class="row-zona mt-27px">
+					Zona 2
+				</div>
+				<!--START NEW-THINGS-->
+					<script>
+					{	
+						var zona1 = [], idValue = [], areaIdValue = [], joinedWithValue = [], skuValue = [], defaultSkuValue = [], statusValue = [], countActiveValue = [];
+						zona1 = ["2"];//sku
+
+						for(var a = 0; a <= newThings.length; a++){
+							for(var b1 = 0; b1 <= zona1.length; b1++){
+								if(newThings[a]["sku"] == zona1[b1]){
+						    		idValue[b1]          = newThings[a]["id"]
+						  	  		areaIdValue[b1]      = newThings[a]["areaId"]
+						     		joinedWithValue[b1]  = newThings[a]["joinedWith"]
+						      		skuValue[b1]         = newThings[a]["sku"]
+						     		defaultSkuValue[b1]  = newThings[a]["defaultSku"]
+						     		statusValue[b1]      = newThings[a]["status"]
+						     		countActiveValue[b1] = newThings[a]["countActive"]
+							      if(b1 == zona1.length-1){
+							      	for(let Nr = 0; Nr < zona1.length; Nr++){
+										var joinedWith;
+										if(joinedWithValue[Nr] == null){
+											if(statusValue[Nr] == "closed"){
+												indicatorcolor = 'indicatorColorRed';
+											} else {
+												indicatorcolor = 'indicatorColor';
+											}
+											joinedWith         = 'none';
+										} else {indicatorcolor = '';
+											joinedWith         = '';
+										}
+
+										document.write(` 
+											<div class="block" id="`+ newThings[Nr].id +`">
+												<div class="indicator `+ indicatorcolor +`"></div>
+												<span class="block-nr">
+													`+ skuValue[Nr] +`
+												</span>
+												<div class="b-nr">
+													<span> 
+														`+ defaultSkuValue[Nr] +` 
+													</span>
+												</div>
+												<div class="decor `+ joinedWith +`"></div>
+											</div> 
+										`);
+									}	
+							      }
+						  		}
+							}
+						}
+					}	
+					</script>
+				<!--END NEW-THINGS-->
+			</div>
+		<!--END   ZONA-2-->
+		<!--START ZONA-4-->
+		<div class="Zona-4">
+			<div class="row-zona mt-27px">
+				Zona 4
+			</div>
+			<!--START NEW-THINGS-->
+				<script>
+				{	
+					var zona1 = [], idValue = [], areaIdValue = [], joinedWithValue = [], skuValue = [], defaultSkuValue = [], statusValue = [], countActiveValue = [];
+					zona1 = ["2", "22"];//sku
+
+					for(var a = 0; a <= newThings.length; a++){
+						for(var b1 = 0; b1 <= zona1.length; b1++){
+							if(newThings[a]["sku"] == zona1[b1]){
+					    		idValue[b1]          = newThings[a]["id"]
+					  	  		areaIdValue[b1]      = newThings[a]["areaId"]
+					     		joinedWithValue[b1]  = newThings[a]["joinedWith"]
+					      		skuValue[b1]         = newThings[a]["sku"]
+					     		defaultSkuValue[b1]  = newThings[a]["defaultSku"]
+					     		statusValue[b1]      = newThings[a]["status"]
+					     		countActiveValue[b1] = newThings[a]["countActive"]
+						      if(b1 == zona1.length-1){
+						      	for(let Nr = 0; Nr < zona1.length; Nr++){
+									var joinedWith;
+									if(joinedWithValue[Nr] == null){
+										if(statusValue[Nr] == "closed"){
+											indicatorcolor = 'indicatorColorRed';
+										} else {
+											indicatorcolor = 'indicatorColor';
+										}
+										joinedWith         = 'none';
+									} else {indicatorcolor = '';
+										joinedWith         = '';
+									}
+
+									document.write(` 
+										<div class="block" id="`+ newThings[Nr].id +`">
+											<div class="indicator `+ indicatorcolor +`"></div>
+											<span class="block-nr">
+												`+ skuValue[Nr] +`
+											</span>
+											<div class="b-nr">
+												<span> 
+													`+ defaultSkuValue[Nr] +` 
+												</span>
+											</div>
+											<div class="decor `+ joinedWith +`"></div>
+										</div> 
+									`);
+								}	
+						      }
+					  		}
+						}
+					}
+				}
+				</script>
+			<!--END NEW-THINGS-->
+		</div>
+		<!--END   ZONA-4-->
+		<!--START ZONA-5-->
+			<div class="Zona-5">
+				<div class="row-zona mt-27px">
+					Zona 5
+				</div>
+				<!--START NEW-THINGS-->
+					<script>
+					{	
+						var zona1 = [], idValue = [], areaIdValue = [], joinedWithValue = [], skuValue = [], defaultSkuValue = [], statusValue = [], countActiveValue = [];
+						zona1 = ["A2", "A1"];//sku
+
+						for(var a = 0; a < newThings.length; a++){
+							for(var b1 = 0; b1 < zona1.length; b1++){
+								if(newThings[a]["sku"] == zona1[b1]){
+						    		idValue[b1]          = newThings[a]["id"]
+						  	  		areaIdValue[b1]      = newThings[a]["areaId"]
+						     		joinedWithValue[b1]  = newThings[a]["joinedWith"]
+						      		skuValue[b1]         = newThings[a]["sku"]
+						     		defaultSkuValue[b1]  = newThings[a]["defaultSku"]
+						     		statusValue[b1]      = newThings[a]["status"]
+						     		countActiveValue[b1] = newThings[a]["countActive"]
+							      if(b1 == zona1.length-1){
+							      	for(let Nr = 0; Nr < zona1.length; Nr++){
+										var joinedWith;
+										if(joinedWithValue[Nr] == null){
+											if(statusValue[Nr] == "closed"){
+												indicatorcolor = 'indicatorColorRed';
+											} else {
+												indicatorcolor = 'indicatorColor';
+											}
+											joinedWith         = 'none';
+										} else {indicatorcolor = '';
+											joinedWith         = '';
+										}
+
+										document.write(` 
+											<div class="block" id="`+ newThings[Nr].id +`">
+												<div class="indicator `+ indicatorcolor +`"></div>
+												<span class="block-nr">
+													`+ skuValue[Nr] +`
+												</span>
+												<div class="b-nr">
+													<span> 
+														`+ defaultSkuValue[Nr] +` 
+													</span>
+												</div>
+												<div class="decor `+ joinedWith +`"></div>
+											</div> 
+										`);
+									}	
+							      }
+						  		}
+							}
+						}
+					}	
+					</script>
+				<!--END NEW-THINGS-->
+			</div>
+		<!--END ZONA-5-->
+	</div>
+</body>
+</html>
